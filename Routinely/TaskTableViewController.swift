@@ -4,7 +4,7 @@
 //
 //  Created by Torin Blankensmith on 4/7/15.
 //  Copyright (c) 2015 Torin Blankensmith. All rights reserved.
-//
+
 
 import UIKit
 
@@ -19,7 +19,10 @@ class TaskTableViewController: RoutineTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: false)
+        self.tableView.backgroundColor = UIColor(white: 0, alpha: 1)
+        let pinch = UIPinchGestureRecognizer(target: self, action: "handlePinch:")
+        self.tableView.addGestureRecognizer(pinch)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,28 +46,96 @@ class TaskTableViewController: RoutineTableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return tasks.count
+        return tasks.count + 1
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as TableViewCell
-        
-        cell.label?.text = tasks[indexPath.row]
-        // Configure the cell...
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("start", forIndexPath: indexPath) as! UITableViewCell
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TableViewCell
+            cell.textLabel?.backgroundColor = UIColor.clearColor()
+            cell.delegate = self
+            cell.routineItem = Routine(text: tasks[indexPath.row - 1])
 
-        return cell
+            return cell
+        }
+        // Configure the cell...
     }
     
-    override func cellDidBeginEditing(editingCell: TableViewCell) {
-        cellSaveState = editingCell.label.text
+    // MARK: - pinch methods
+    struct TouchPoints {
+        var upper: CGPoint
+        var lower: CGPoint
     }
-
-    override func cellDidEndEditing(editingCell: TableViewCell) {
-        if editingCell.label.text != cellSaveState {
-            let index = find(tasks, cellSaveState)
-            routineItems[index!] = editingCell.label.text
+    // the indices of the upper and lower cells that are being pinched
+    var upperCellIndex = -100
+    var lowerCellIndex = -100
+    // the location of the touch points when the pinch began
+    var initialTouchPoints: TouchPoints!
+    // indicates that the pinch was big enough to cause a new item to be added
+    var pinchExceededRequiredDistance = false
+    
+    var pinchInProgress = false
+    
+    func handlePinch(recognizer: UIPinchGestureRecognizer) {
+        switch recognizer.state {
+        case .Began:
+            performSegueWithIdentifier("unwindSegue", sender: self)
+//            pinchStarted(recognizer)
+        case .Changed :
+            if pinchInProgress && recognizer.numberOfTouches() == 2 {
+                pinchChanged(recognizer)
+            }
+        case .Ended:
+            pinchEnded(recognizer)
+        default:
+            break
         }
     }
+    
+    func pinchStarted(recognizer: UIPinchGestureRecognizer) {
+
+    }
+    
+    func pinchChanged(recognizer: UIPinchGestureRecognizer) {
+        
+    }
+    
+    func pinchEnded(recognizer: UIPinchGestureRecognizer) {
+        
+    }
+    
+    // returns the two touch points, ordering them to ensure that
+    // upper and lower are correctly identified.
+    func getNormalizedTouchPoints(recognizer: UIGestureRecognizer) -> TouchPoints {
+        var pointOne = recognizer.locationOfTouch(0, inView: tableView)
+        var pointTwo = recognizer.locationOfTouch(1, inView: tableView)
+        // ensure pointOne is the top-most
+        if pointOne.y > pointTwo.y {
+            let temp = pointOne
+            pointOne = pointTwo
+            pointTwo = temp
+        }
+        return TouchPoints(upper: pointOne, lower: pointTwo)
+    }
+    
+    func viewContainsPoint(view: UIView, point: CGPoint) -> Bool {
+        let frame = view.frame
+        return (frame.origin.y < point.y) && (frame.origin.y + (frame.size.height) > point.y)
+    }
+    
+//    override func cellDidBeginEditing(editingCell: TableViewCell) {
+//        cellSaveState = editingCell.label.text
+//    }
+
+//    override func cellDidEndEditing(editingCell: TableViewCell) {
+//        if editingCell.label.text != cellSaveState {
+//            let index = find(tasks, cellSaveState)
+////            routineItems[index!] = editingCell.label.text
+//        }
+//    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -106,13 +177,15 @@ class TaskTableViewController: RoutineTableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let view = segue.destinationViewController as CardViewController
-        NSLog(navigationItem.title!)
-        view.groupTitle = navigationItem.title!
-        NSLog(tasks.count.description)
-        view.tasks = self.tasks
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "presentCardViewSegue" {
+            let view = segue.destinationViewController as! CardViewController
+            NSLog(navigationItem.title!)
+            view.groupTitle = navigationItem.title!
+            NSLog(tasks.count.description)
+            view.tasks = self.tasks
+            // Get the new view controller using [segue destinationViewController].
+            // Pass the selected object to the new view controller.
+        }
     }
 
 }

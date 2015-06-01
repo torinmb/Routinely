@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4254EA141AD69AA1001D2F23 /* Spring.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 42F4C6C81AD602F90024A5F7 /* Spring.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		422B45131B145C7A007F0D79 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B45121B145C7A007F0D79 /* Routine.swift */; };
+		422B45181B147129007F0D79 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B45171B147129007F0D79 /* Task.swift */; };
 		42AC50A71AD4C76D00F4E654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC50A61AD4C76D00F4E654 /* AppDelegate.swift */; };
 		42AC50AA1AD4C76D00F4E654 /* Routinely.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42AC50A81AD4C76D00F4E654 /* Routinely.xcdatamodeld */; };
 		42AC50AC1AD4C76D00F4E654 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC50AB1AD4C76D00F4E654 /* ViewController.swift */; };
-		42AC50AF1AD4C76D00F4E654 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42AC50AD1AD4C76D00F4E654 /* Main.storyboard */; };
-		42AC50B11AD4C76D00F4E654 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42AC50B01AD4C76D00F4E654 /* Images.xcassets */; };
-		42AC50B41AD4C76D00F4E654 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42AC50B21AD4C76D00F4E654 /* LaunchScreen.xib */; };
 		42AC50C01AD4C76E00F4E654 /* RoutinelyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC50BF1AD4C76E00F4E654 /* RoutinelyTests.swift */; };
 		42AC50CA1AD4C81600F4E654 /* RoutineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC50C91AD4C81600F4E654 /* RoutineTableViewController.swift */; };
 		42AC50CC1AD4E35100F4E654 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC50CB1AD4E35000F4E654 /* TableViewCell.swift */; };
 		42AC50CE1AD5049700F4E654 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC50CD1AD5049700F4E654 /* TaskTableViewController.swift */; };
+		42DEF87F1ADB52AD00B5BE3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42AC50AD1AD4C76D00F4E654 /* Main.storyboard */; };
+		42DEF8801ADB52B600B5BE3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42AC50B21AD4C76D00F4E654 /* LaunchScreen.xib */; };
+		42DEF8811ADB52BB00B5BE3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42AC50B01AD4C76D00F4E654 /* Images.xcassets */; };
+		42E523F01ADC6F0C00836106 /* Spring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E523ED1ADC6EE300836106 /* Spring.framework */; };
+		42E523F11ADC6F0C00836106 /* Spring.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 42E523ED1ADC6EE300836106 /* Spring.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42F4C64C1AD6026F0024A5F7 /* DragDropBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F4C64B1AD6026F0024A5F7 /* DragDropBehavior.swift */; };
 		42F4C6D01AD607B80024A5F7 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F4C6CF1AD607B80024A5F7 /* CardViewController.swift */; };
 		42F4C6D21AD661760024A5F7 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F4C6D11AD661760024A5F7 /* TimerViewController.swift */; };
@@ -32,37 +35,37 @@
 			remoteGlobalIDString = 42AC50A01AD4C76D00F4E654;
 			remoteInfo = Routinely;
 		};
-		42F4C6C31AD602F90024A5F7 /* PBXContainerItemProxy */ = {
+		42E523E81ADC6EE300836106 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 42F4C68A1AD602F90024A5F7 /* SpringApp.xcodeproj */;
+			containerPortal = 42E523E11ADC6EE300836106 /* SpringApp.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9641173B1A5BE90A000E3A5A;
 			remoteInfo = SpringApp;
 		};
-		42F4C6C51AD602F90024A5F7 /* PBXContainerItemProxy */ = {
+		42E523EA1ADC6EE300836106 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 42F4C68A1AD602F90024A5F7 /* SpringApp.xcodeproj */;
+			containerPortal = 42E523E11ADC6EE300836106 /* SpringApp.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 964117501A5BE90A000E3A5A;
 			remoteInfo = SpringAppTests;
 		};
-		42F4C6C71AD602F90024A5F7 /* PBXContainerItemProxy */ = {
+		42E523EC1ADC6EE300836106 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 42F4C68A1AD602F90024A5F7 /* SpringApp.xcodeproj */;
+			containerPortal = 42E523E11ADC6EE300836106 /* SpringApp.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1A4FDA331A6E44780099D309;
 			remoteInfo = Spring;
 		};
-		42F4C6C91AD602F90024A5F7 /* PBXContainerItemProxy */ = {
+		42E523EE1ADC6EE300836106 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 42F4C68A1AD602F90024A5F7 /* SpringApp.xcodeproj */;
+			containerPortal = 42E523E11ADC6EE300836106 /* SpringApp.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1A4FDA3D1A6E44780099D309;
 			remoteInfo = SpringTests;
 		};
-		42F4C6CD1AD603390024A5F7 /* PBXContainerItemProxy */ = {
+		42E523F21ADC6F0C00836106 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 42F4C68A1AD602F90024A5F7 /* SpringApp.xcodeproj */;
+			containerPortal = 42E523E11ADC6EE300836106 /* SpringApp.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 1A4FDA321A6E44780099D309;
 			remoteInfo = Spring;
@@ -76,13 +79,15 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4254EA141AD69AA1001D2F23 /* Spring.framework in CopyFiles */,
+				42E523F11ADC6F0C00836106 /* Spring.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		422B45121B145C7A007F0D79 /* Routine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
+		422B45171B147129007F0D79 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		42AC50A11AD4C76D00F4E654 /* Routinely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Routinely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42AC50A51AD4C76D00F4E654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42AC50A61AD4C76D00F4E654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,8 +102,8 @@
 		42AC50C91AD4C81600F4E654 /* RoutineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineTableViewController.swift; sourceTree = "<group>"; };
 		42AC50CB1AD4E35000F4E654 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		42AC50CD1AD5049700F4E654 /* TaskTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
+		42E523E11ADC6EE300836106 /* SpringApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SpringApp.xcodeproj; path = "../../Downloads/Spring-master 2/SpringApp.xcodeproj"; sourceTree = "<group>"; };
 		42F4C64B1AD6026F0024A5F7 /* DragDropBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragDropBehavior.swift; sourceTree = "<group>"; };
-		42F4C68A1AD602F90024A5F7 /* SpringApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SpringApp.xcodeproj; sourceTree = "<group>"; };
 		42F4C6CF1AD607B80024A5F7 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		42F4C6D11AD661760024A5F7 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		42F4C6D31AD670110024A5F7 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
@@ -109,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E523F01ADC6F0C00836106 /* Spring.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,10 +131,10 @@
 		42AC50981AD4C76D00F4E654 = {
 			isa = PBXGroup;
 			children = (
+				42E523E11ADC6EE300836106 /* SpringApp.xcodeproj */,
 				42AC50A31AD4C76D00F4E654 /* Routinely */,
 				42AC50BC1AD4C76E00F4E654 /* RoutinelyTests */,
 				42AC50A21AD4C76D00F4E654 /* Products */,
-				42F4C65C1AD602F90024A5F7 /* Spring */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +158,8 @@
 				42F4C6CF1AD607B80024A5F7 /* CardViewController.swift */,
 				42AC50CD1AD5049700F4E654 /* TaskTableViewController.swift */,
 				42AC50C91AD4C81600F4E654 /* RoutineTableViewController.swift */,
+				422B45121B145C7A007F0D79 /* Routine.swift */,
+				422B45171B147129007F0D79 /* Task.swift */,
 				42AC50CB1AD4E35000F4E654 /* TableViewCell.swift */,
 				42F4C64A1AD602600024A5F7 /* Behaviors */,
 				42AC50B01AD4C76D00F4E654 /* Images.xcassets */,
@@ -187,31 +195,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		42E523E21ADC6EE300836106 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42E523E91ADC6EE300836106 /* SpringApp.app */,
+				42E523EB1ADC6EE300836106 /* SpringAppTests.xctest */,
+				42E523ED1ADC6EE300836106 /* Spring.framework */,
+				42E523EF1ADC6EE300836106 /* SpringTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		42F4C64A1AD602600024A5F7 /* Behaviors */ = {
 			isa = PBXGroup;
 			children = (
 				42F4C64B1AD6026F0024A5F7 /* DragDropBehavior.swift */,
 			);
 			name = Behaviors;
-			sourceTree = "<group>";
-		};
-		42F4C65C1AD602F90024A5F7 /* Spring */ = {
-			isa = PBXGroup;
-			children = (
-				42F4C68A1AD602F90024A5F7 /* SpringApp.xcodeproj */,
-			);
-			path = Spring;
-			sourceTree = "<group>";
-		};
-		42F4C68B1AD602F90024A5F7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				42F4C6C41AD602F90024A5F7 /* SpringApp.app */,
-				42F4C6C61AD602F90024A5F7 /* SpringAppTests.xctest */,
-				42F4C6C81AD602F90024A5F7 /* Spring.framework */,
-				42F4C6CA1AD602F90024A5F7 /* SpringTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +229,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				42F4C6CE1AD603390024A5F7 /* PBXTargetDependency */,
+				42E523F31ADC6F0C00836106 /* PBXTargetDependency */,
 			);
 			name = Routinely;
 			productName = Routinely;
@@ -285,8 +285,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 42F4C68B1AD602F90024A5F7 /* Products */;
-					ProjectRef = 42F4C68A1AD602F90024A5F7 /* SpringApp.xcodeproj */;
+					ProductGroup = 42E523E21ADC6EE300836106 /* Products */;
+					ProjectRef = 42E523E11ADC6EE300836106 /* SpringApp.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -298,32 +298,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		42F4C6C41AD602F90024A5F7 /* SpringApp.app */ = {
+		42E523E91ADC6EE300836106 /* SpringApp.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = SpringApp.app;
-			remoteRef = 42F4C6C31AD602F90024A5F7 /* PBXContainerItemProxy */;
+			remoteRef = 42E523E81ADC6EE300836106 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42F4C6C61AD602F90024A5F7 /* SpringAppTests.xctest */ = {
+		42E523EB1ADC6EE300836106 /* SpringAppTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = SpringAppTests.xctest;
-			remoteRef = 42F4C6C51AD602F90024A5F7 /* PBXContainerItemProxy */;
+			remoteRef = 42E523EA1ADC6EE300836106 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42F4C6C81AD602F90024A5F7 /* Spring.framework */ = {
+		42E523ED1ADC6EE300836106 /* Spring.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Spring.framework;
-			remoteRef = 42F4C6C71AD602F90024A5F7 /* PBXContainerItemProxy */;
+			remoteRef = 42E523EC1ADC6EE300836106 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42F4C6CA1AD602F90024A5F7 /* SpringTests.xctest */ = {
+		42E523EF1ADC6EE300836106 /* SpringTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = SpringTests.xctest;
-			remoteRef = 42F4C6C91AD602F90024A5F7 /* PBXContainerItemProxy */;
+			remoteRef = 42E523EE1ADC6EE300836106 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -333,9 +333,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42AC50AF1AD4C76D00F4E654 /* Main.storyboard in Resources */,
-				42AC50B41AD4C76D00F4E654 /* LaunchScreen.xib in Resources */,
-				42AC50B11AD4C76D00F4E654 /* Images.xcassets in Resources */,
+				42DEF8811ADB52BB00B5BE3A /* Images.xcassets in Resources */,
+				42DEF8801ADB52B600B5BE3A /* LaunchScreen.xib in Resources */,
+				42DEF87F1ADB52AD00B5BE3A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,9 +357,11 @@
 				42AC50CE1AD5049700F4E654 /* TaskTableViewController.swift in Sources */,
 				42F4C6D21AD661760024A5F7 /* TimerViewController.swift in Sources */,
 				42AC50CC1AD4E35100F4E654 /* TableViewCell.swift in Sources */,
+				422B45181B147129007F0D79 /* Task.swift in Sources */,
 				42F4C64C1AD6026F0024A5F7 /* DragDropBehavior.swift in Sources */,
 				42AC50CA1AD4C81600F4E654 /* RoutineTableViewController.swift in Sources */,
 				42F4C6D01AD607B80024A5F7 /* CardViewController.swift in Sources */,
+				422B45131B145C7A007F0D79 /* Routine.swift in Sources */,
 				42AC50AC1AD4C76D00F4E654 /* ViewController.swift in Sources */,
 				42AC50A71AD4C76D00F4E654 /* AppDelegate.swift in Sources */,
 				42AC50AA1AD4C76D00F4E654 /* Routinely.xcdatamodeld in Sources */,
@@ -382,10 +384,10 @@
 			target = 42AC50A01AD4C76D00F4E654 /* Routinely */;
 			targetProxy = 42AC50BA1AD4C76E00F4E654 /* PBXContainerItemProxy */;
 		};
-		42F4C6CE1AD603390024A5F7 /* PBXTargetDependency */ = {
+		42E523F31ADC6F0C00836106 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Spring;
-			targetProxy = 42F4C6CD1AD603390024A5F7 /* PBXContainerItemProxy */;
+			targetProxy = 42E523F21ADC6F0C00836106 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

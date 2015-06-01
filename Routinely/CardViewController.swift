@@ -27,14 +27,14 @@ class CardViewController: UIViewController, DragDropBehaviorDelegate {
     @IBOutlet weak var cardTitle: UILabel!
     @IBOutlet weak var cardView: DesignableView!
     @IBOutlet weak var task: SpringLabel!
-    
     @IBOutlet var displayTimeLabel: UILabel!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        task.text = tasks[0]
+        task.text = tasks.removeAtIndex(0)
         cardTitle.text = groupTitle
+        
         // Do any additional setup after loading the view.
     }
 
@@ -44,7 +44,18 @@ class CardViewController: UIViewController, DragDropBehaviorDelegate {
     }
     
     func dragDropBehavior(behavior: DragDropBehavior, viewDidDrop view: UIView) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+//        self.cardView.hidden = true
+        if tasks.count == 0 {
+            self.cardView.hidden = true
+            self.dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            cardView.center = self.view.center
+            task.text = tasks.removeAtIndex(0)
+//            self.cardView.hidden = false
+            
+        }
+        
+//
     }
     
     @IBAction func start(sender: AnyObject) {
